@@ -126,7 +126,7 @@ public class TempMail {
 
 	}
 
-	public void deleteEmail(final String md5hash) throws IOException {
+	public static void deleteEmail(final String md5hash) throws IOException {
 		if (md5hash == null || md5hash.length() != 32)
 			throw new IllegalArgumentException("Argument provided not a md5 hash!");
 		final HttpRequest HR = new HttpRequest(DELETE_MESSAGE_LINK.replace("md5", md5hash));
